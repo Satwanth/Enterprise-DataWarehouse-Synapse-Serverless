@@ -1,8 +1,6 @@
 # 📊 Enterprise Data Warehouse on Azure Synapse (Serverless)
 
-This project demonstrates an **end-to-end enterprise data warehouse** built on **Azure Synapse Analytics serverless SQL pools**, including ingestion, transformation, and dimensional modeling over Azure Data Lake Gen2.
-
-The goal was to build a modern data warehouse architecture with **bronze, silver, and gold layers**, using serverless compute for cost-efficient, scalable analytics.
+This project showcases a complete end-to-end data solution fully implemented within **Azure Synapse Analytics**. From ingesting a raw CSV file, transforming it using Synapse Data Flows, and storing curated data in Azure Data Lake Gen2, to building a **serverless SQL-based data warehouse with dimensional modeling**, surrogate keys, and organized fact and dimension tables ready for analysis and reporting. The solution demonstrates how Synapse can serve as a unified platform for data extraction, transformation, loading, and modeling—without relying on any external services.
 
 ---
 
