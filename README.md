@@ -24,15 +24,20 @@ Below are the main steps performed:
 
 ---
 
-### 1️⃣ Synapse Workspace and Storage Setup
+### 1️⃣ Synapse Workspace, Storage Setup, and Ingestion Pipeline
 
 - Created an **Azure Synapse Analytics workspace**.
 - Provisioned **Azure Data Lake Storage Gen2** containers:
-  - `silver` container for curated data
-  - `gold` container for dimensional and fact data
+  - **bronze** container for raw ingested data
+  - **silver** container for transformed data
+  - **gold** container for dimensional and fact data
 - Configured **Managed Identity access**:
-  - Assigned **Storage Blob Data Contributor** role to the Synapse workspace's managed identity.
+  - Assigned **Storage Blob Data Contributor** role to the Synapse workspace’s managed identity.
   - Enabled seamless access without storing keys.
+- Built a **Synapse Pipeline** to ingest and prepare the data end-to-end:
+  - Extracted raw CSV data into the **bronze layer** of Data Lake.
+  - Applied transformations using **Data Flow activities** within Synapse.
+  - Stored the clean, standardized output in the **silver layer** as Parquet files.
 
 ---
 
